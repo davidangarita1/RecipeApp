@@ -1,7 +1,4 @@
-import './App.css';
-import React from 'react';
-
-import Home from './pages/Home'
+import Home from "./pages/Home";
 
 const App = () => {
   return (
@@ -9,6 +6,6 @@ const App = () => {
       <Home />
     </div>
   );
-}
+};
 
 export default App;
