@@ -17,7 +17,7 @@ const Header = () => {
               <li>Platos Principales</li>
               <li>Tortas</li>
               <li>Comida Rápida</li>
-              <li>Menú; Niños</li>
+              <li>Menú Niños</li>
               <li>Sopas</li>
             </ul>
           </div>
