@@ -1,4 +1,7 @@
 import { Fragment } from "react";
+import { navBarData } from "../data/navBarData";
+
+import { navBarType } from "../types/navBarType";
 
 const Header = (): JSX.Element => {
   return (
@@ -11,15 +14,14 @@ const Header = (): JSX.Element => {
           </div>
           <div className="navbar">
             <ul>
-              <li className="selected">Home</li>
-              <li>Vegetarianos</li>
-              <li>Platos Principales</li>
-              <li>Tortas</li>
-              <li>Comida Rápida</li>
-              <li>Menú Niños</li>
-              <li>Sopas</li>
+              {navBarData.map((item: navBarType, index: number) => (
+                <li className={item.cName} key={index}>
+                  {item.title}
+                </li>
+              ))}
             </ul>
           </div>
+          <div className="home"></div>
         </nav>
         <div className="banner">
           <div className="title">
