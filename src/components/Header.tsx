@@ -21,7 +21,7 @@ const Header = (): JSX.Element => {
               ))}
             </ul>
           </div>
-          <div className="home"></div>
+          <div className="btn-home"></div>
         </nav>
         <div className="banner">
           <div className="title">

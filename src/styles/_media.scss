@@ -1,4 +1,36 @@
+@import "_variables.scss";
+
 @media (max-width: 428px) {
+  .header {
+    nav {
+      .navbar {
+        display: none;
+      }
+      .btn-home {
+        display: block;
+        top: 24px;
+        right: 33px;
+      }
+    }
+    .banner {
+      height: 234px;
+      background-image: url(../assets/bcq.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-x: center;
+      .title {
+        top: 50px;
+        left: 56.5px;
+        .first {
+          font: normal normal normal 51px/77px $Font2;
+        }
+        .second {
+          font: normal normal normal 51px/69px $Font1;
+          margin-top: -30px;
+        }
+      }
+    }
+  }
   .footer {
     height: 70px;
     .img {
@@ -11,12 +43,42 @@
     .text {
       left: 23.38px;
       top: 20.3px;
-      font: normal normal normal 23px/31px Monster Clubhouse;
+      font: normal normal normal 23px/31px $Font1;
     }
   }
 }
 
 @media (min-width: 429px) and (max-width: 768px) {
+  .header {
+    nav {
+      .navbar {
+        display: none;
+      }
+      .btn-home {
+        display: block;
+        top: 24px;
+        right: 25px;
+      }
+    }
+    .banner {
+      height: 249px;
+      background-image: url(../assets/bcq.jpg);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      .title {
+        top: 50px;
+        left: 121.55px;
+        .first {
+          font: normal normal normal 74px/111px $Font2;
+        }
+        .second {
+          font: normal normal normal 67px/91px $Font1;
+          margin-top: -10px;
+        }
+      }
+    }
+  }
   .footer {
     height: 115.65px;
     .img {
@@ -29,12 +91,41 @@
     .text {
       left: 49px;
       top: 30.3px;
-      font: normal normal normal 39px/53px Monster Clubhouse;
+      font: normal normal normal 39px/53px $Font1;
     }
   }
 }
 
 @media (min-width: 769px) {
+  .header {
+    nav {
+      .navbar {
+        display: flex;
+      }
+      .btn-home {
+        display: none;
+      }
+    }
+    .banner {
+      height: 416px;
+      background-image: url(../assets/bcq.jpg);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      .title {
+        top: 134px;
+        left: 261px;
+        .first {
+          font: normal normal normal 74px/111px $Font2;
+        }
+        .second {
+          font: normal normal normal 67px/91px $Font1;
+          margin-top: -10px;
+        }
+      }
+    }
+  }
+
   .footer {
     .img {
       top: -46px;
@@ -46,7 +137,7 @@
     .text {
       left: 166px;
       top: 52.3px;
-      font: normal normal normal 56px/76px Monster Clubhouse;
+      font: normal normal normal 56px/76px $Font1;
     }
   }
 }

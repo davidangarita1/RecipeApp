@@ -1,7 +1,4 @@
-$color-425966: #425966;
-$color-d84a4a: #d84a4a;
-$Font1: Monster Clubhouse;
-$Font2: Poppins;
+@import '_variables.scss';
 
 .header {
   nav {
@@ -32,31 +29,66 @@ $Font2: Poppins;
     }
     .navbar {
       position: absolute;
-      right: 70px;
+      right: 65px;
       ul {
         display: flex;
         list-style: none;
         font: normal normal normal 13px/20px $Font2;
       }
       li {
+        color: $color-425966;
         text-align: left;
         letter-spacing: 0px;
-        color: $color-425966;
         opacity: 1;
         padding: 0px 15px;
         &.selected {
           color: $color-d84a4a;
         }
         &:hover {
+          color: $color-d84a4a;
           text-align: left;
           letter-spacing: 0px;
-          color: $color-d84a4a;
           opacity: 1;
           cursor: pointer;
         }
       }
     }
+    .btn-home {
+      height: 25px;
+      width: 25px;
+      background-image: url(../assets/icons/ic_home.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-x: center;
+      position: absolute;
+    }
   }
+  .banner {
+    background-size  : 100% 100%;
+    background-repeat: no-repeat;
+    background-size  : cover;
+    width            : 100%;
+    contain          : content;
+    .title {
+      position      : absolute;
+      display       : flex;
+      flex-direction: column;
+      width         : 300px;
+      .first {
+        text-align    : left;
+        letter-spacing: 0px;
+        color         : $color-text;
+        opacity       : 1;
+        height        : 79px;
+      }
+      .second {
+        text-align    : left;
+        letter-spacing: 0px;
+        color         : $color-text;
+        opacity       : 1;
+      }
+    }
+}
 }
 
 .main {
