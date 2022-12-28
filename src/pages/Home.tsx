@@ -2,6 +2,7 @@ import { Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import { getAllRecipes } from "../redux/middlewares/recipesMiddleware";
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       {isLoading && <p>Loading...</p>}
       {error && <p>Error...</p>}
       {recipes && recipes.count}
+      <Footer />
     </Fragment>
   );
 };

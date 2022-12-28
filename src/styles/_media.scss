@@ -1,0 +1,52 @@
+@media (max-width: 428px) {
+  .footer {
+    height: 70px;
+    .img {
+      top: -20px;
+      left: 190px;
+      width: 228px;
+      height: 106px;
+      position: absolute;
+    }
+    .text {
+      left: 23.38px;
+      top: 20.3px;
+      font: normal normal normal 23px/31px Monster Clubhouse;
+    }
+  }
+}
+
+@media (min-width: 429px) and (max-width: 768px) {
+  .footer {
+    height: 115.65px;
+    .img {
+      top: -46px;
+      left: 328.39px;
+      width: 379px;
+      height: 175px;
+      position: absolute;
+    }
+    .text {
+      left: 49px;
+      top: 30.3px;
+      font: normal normal normal 39px/53px Monster Clubhouse;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .footer {
+    .img {
+      top: -46px;
+      right: 60px;
+      width: 536px;
+      height: 248px;
+      position: absolute;
+    }
+    .text {
+      left: 166px;
+      top: 52.3px;
+      font: normal normal normal 56px/76px Monster Clubhouse;
+    }
+  }
+}
