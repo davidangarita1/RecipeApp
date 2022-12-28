@@ -1,4 +1,4 @@
-@import '_variables.scss';
+@import "_variables.scss";
 
 .header {
   nav {
@@ -64,36 +64,36 @@
     }
   }
   .banner {
-    background-size  : 100% 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-size  : cover;
-    width            : 100%;
-    contain          : content;
+    background-size: cover;
+    width: 100%;
+    contain: content;
     .title {
-      position      : absolute;
-      display       : flex;
+      position: absolute;
+      display: flex;
       flex-direction: column;
-      width         : 300px;
+      width: 300px;
       .first {
-        text-align    : left;
+        text-align: left;
         letter-spacing: 0px;
-        color         : $color-text;
-        opacity       : 1;
-        height        : 79px;
+        color: $color-text;
+        opacity: 1;
+        height: 79px;
       }
       .second {
-        text-align    : left;
+        text-align: left;
         letter-spacing: 0px;
-        color         : $color-text;
-        opacity       : 1;
+        color: $color-text;
+        opacity: 1;
       }
     }
+  }
 }
-}
-
 .main {
   contain: content;
   width: 100%;
+  height: 100%;
   position: absolute;
   .title {
     color: $color-d84a4a;
@@ -106,7 +106,7 @@
     flex-direction: row;
     justify-content: center;
     .recipeCard {
-      width: 100%;
+      cursor: pointer;
       opacity: 1;
       position: relative;
       box-shadow: 10px 10px 20px -5px #cccccc;
@@ -124,6 +124,19 @@
         position: relative;
         top: -25px;
       }
+      .menu {
+        img {
+          width: 17px;
+          height: 17px;
+        }
+        .subTitle {
+          color: $color-d84a4a;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
       .title {
         color: $color-d84a4a;
         text-align: left;
@@ -134,7 +147,6 @@
     }
   }
 }
-
 .footer {
   bottom: 23px;
   position: absolute;

@@ -1,6 +1,11 @@
 @import "_variables.scss";
 
 @media (max-width: 428px) {
+  body {
+    height: 926px;
+    contain: content;
+    width: 428px;
+  }
   .header {
     nav {
       .navbar {
@@ -31,6 +36,27 @@
       }
     }
   }
+  .main {
+    top: 500px;
+    .title {
+      padding-left: 64px;
+      font: normal normal normal 54px/74px $Font1;
+    }
+    .carousel {
+      top: -25px;
+      position: relative;
+      justify-content: flex-start;
+      .recipeCard {
+        width: 180px;
+        height: 182px;
+        .img {
+          width: 111px;
+          height: 107px;
+          margin-left: 34.84px;
+        }
+      }
+    }
+  }
   .footer {
     height: 70px;
     .img {
@@ -49,6 +75,11 @@
 }
 
 @media (min-width: 429px) and (max-width: 768px) {
+  body {
+    height: 1024px;
+    contain: content;
+    width: 768px;
+  }
   .header {
     nav {
       .navbar {
@@ -79,6 +110,25 @@
       }
     }
   }
+  .main {
+    top: 406px;
+    .title {
+      padding-left: 70px;
+      font: normal normal normal 67px/91px $Font1;
+    }
+    .carousel {
+      justify-content: flex-start;
+      .recipeCard {
+        height: 269px;
+        width: 266px;
+        .img {
+          width: 164px;
+          height: 158px;
+          margin-left: 51.55px;
+        }
+      }
+    }
+  }
   .footer {
     height: 115.65px;
     .img {
@@ -97,6 +147,10 @@
 }
 
 @media (min-width: 769px) {
+  body {
+    height: 1280px;
+    contain: content;
+  }
   .header {
     nav {
       .navbar {
@@ -125,7 +179,34 @@
       }
     }
   }
-
+  .main {
+    top: 513px;
+    .title {
+      padding-left: 70px;
+      font: normal normal normal 67px/91px $Font1;
+    }
+    .carousel {
+      justify-content: center;
+      .recipeCard {
+        height: 269px;
+        width: 266px;
+        .img {
+          width: 164px;
+          height: 158px;
+          margin-left: 51.55px;
+        }
+        &.show {
+          height: 100%;
+        }
+        .menu {
+          font: normal normal normal 20px/40px $Font1;
+        }
+        .title {
+          font: normal normal normal 30px/40px $Font1;
+        }
+      }
+    }
+  }
   .footer {
     .img {
       top: -46px;
