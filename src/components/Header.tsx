@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <Fragment>
       <div className="header">

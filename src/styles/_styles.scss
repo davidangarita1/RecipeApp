@@ -1,5 +1,5 @@
-$unnamed-color-425966: #425966;
-$unnamed-color-d84a4a: #D84A4A;
+$color-425966: #425966;
+$color-d84a4a: #d84a4a;
 $Font1: Monster Clubhouse;
 $Font2: Poppins;
 
@@ -19,14 +19,14 @@ $Font2: Poppins;
       .first {
         text-align: left;
         letter-spacing: 1.15px;
-        color: $unnamed-color-425966;
+        color: $color-425966;
         font: normal normal normal 40px/54px $Font1;
       }
       .second {
         text-align: left;
         font: normal normal normal 30px/46px $Font2;
         letter-spacing: 0.86px;
-        color: $unnamed-color-d84a4a;
+        color: $color-d84a4a;
         opacity: 1;
       }
     }
@@ -41,19 +41,63 @@ $Font2: Poppins;
       li {
         text-align: left;
         letter-spacing: 0px;
-        color: $unnamed-color-425966;
+        color: $color-425966;
         opacity: 1;
         padding: 0px 15px;
         &.selected {
-          color: $unnamed-color-d84a4a;
+          color: $color-d84a4a;
         }
         &:hover {
           text-align: left;
           letter-spacing: 0px;
-          color: $unnamed-color-d84a4a;
+          color: $color-d84a4a;
           opacity: 1;
           cursor: pointer;
         }
+      }
+    }
+  }
+}
+
+.main {
+  contain: content;
+  width: 100%;
+  position: absolute;
+  .title {
+    color: $color-d84a4a;
+    text-align: left;
+    letter-spacing: 0px;
+    opacity: 1;
+  }
+  .carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .recipeCard {
+      width: 100%;
+      opacity: 1;
+      position: relative;
+      box-shadow: 10px 10px 20px -5px #cccccc;
+      border-radius: 15px;
+      margin-top: 25px;
+      margin-right: 25.82px;
+      transition: height 0.2s;
+      list-style: none;
+      background: transparent linear-gradient(180deg, #e9f1fa 0%, #ffffff 100%)
+        0% 0% no-repeat padding-box;
+      .img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: relative;
+        top: -25px;
+      }
+      .title {
+        color: $color-d84a4a;
+        text-align: left;
+        letter-spacing: 0px;
+        word-wrap: break-word;
+        overflow: hidden;
       }
     }
   }
@@ -74,12 +118,12 @@ $Font2: Poppins;
     position: absolute;
     text-align: left;
     letter-spacing: 0px;
-    color: $unnamed-color-425966;
+    color: $color-425966;
     opacity: 1;
     span {
       text-align: left;
       letter-spacing: 0px;
-      color: $unnamed-color-425966;
+      color: $color-425966;
     }
   }
 }
