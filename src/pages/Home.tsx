@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
+import ResponsiveNavbar from "../components/ResponsiveNavbar";
+
+import { responsiveNavbarData } from "../data/responsiveNavbarData";
 
 import { getAllRecipes } from "../redux/middlewares/recipesMiddleware";
 const Home = (): JSX.Element => {
@@ -19,9 +22,10 @@ const Home = (): JSX.Element => {
   return (
     <Fragment>
       <Header />
+      <ResponsiveNavbar data={responsiveNavbarData} />
+      {recipes && <Main list={recipes.results} />}
       {isLoading && <p>Loading...</p>}
       {error && <p>Error...</p>}
-      {recipes && <Main list={recipes.results} />}
       <Footer />
     </Fragment>
   );

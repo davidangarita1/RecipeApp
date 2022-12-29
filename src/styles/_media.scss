@@ -36,6 +36,17 @@
       }
     }
   }
+  .responsiveNavbar {
+    display: flex;
+    top: 280px;
+    flex-wrap: wrap;
+    left: 30.9px;
+    .cardMenu {
+      width: 114px;
+      height: 92px;
+      margin-bottom: 15px;
+    }
+  }
   .main {
     top: 500px;
     .title {
@@ -48,14 +59,14 @@
       .recipeCard {
         width: 180px;
         height: 182px;
+        padding: 0px 20px 20px 20px;
         .img {
           width: 111px;
           height: 107px;
-          margin-left: 34.84px;
         }
         .score {
           span {
-            font: normal normal normal 17px/26px Poppins;
+            font: normal normal normal 17px/26px $Font2;
             left: 33.45px;
           }
         }
@@ -66,6 +77,15 @@
         .heart {
           height: 16px;
           width: 16px;
+        }
+        .cardTitle {
+          text-align: center;
+          .firstText {
+            font: normal normal normal 20px/24px $Font2;
+          }
+          .secondText {
+            font: normal normal normal 20px/24px $Font1;
+          }
         }
       }
     }
@@ -123,25 +143,41 @@
       }
     }
   }
+  .responsiveNavbar {
+    display: flex;
+    top: 288px;
+    left: 20px;
+    .cardMenu {
+      width: 106px;
+      height: 85px;
+    }
+  }
   .main {
     top: 406px;
     .title {
       font: normal normal normal 67px/91px $Font1;
     }
     .carousel {
-      justify-content: flex-start;
       .recipeCard {
-        height: 269px;
+        height: 209px;
         width: 266px;
         .img {
-          width: 164px;
-          height: 158px;
-          margin-left: 51.55px;
+          width: 100px;
+          height: 100px;
         }
         .score {
           span {
-            font: normal normal normal 26px/39px Poppins;
+            font: normal normal normal 26px/39px $Font2;
             left: 47.5px;
+          }
+        }
+        .cardTitle {
+          text-align: center;
+          .firstText {
+            font: normal normal normal 30px/36px $Font2;
+          }
+          .secondText {
+            font: normal normal normal 30px/36px $Font1;
           }
         }
       }
@@ -197,20 +233,21 @@
       }
     }
   }
+  .responsiveNavbar {
+    display: none;
+  }
   .main {
     top: 513px;
     .title {
-      padding-left: 70px;
       font: normal normal normal 67px/91px $Font1;
     }
     .carousel {
       justify-content: center;
       .recipeCard {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-        min-height: 269px;
+        height: 269px;
+        &.show {
+          height: 100%;
+        }
         width: 266px;
         .img {
           width: 164px;
@@ -218,7 +255,7 @@
         }
         .score {
           span {
-            font: normal normal normal 26px/39px Poppins;
+            font: normal normal normal 26px/39px $Font2;
             left: 47.5px;
           }
         }

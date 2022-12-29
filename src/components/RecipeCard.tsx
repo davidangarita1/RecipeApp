@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 import portion from "../assets/icons/ic_portion.svg";
 import time from "../assets/icons/ic_time.svg";
@@ -10,12 +10,28 @@ type RecipeCardProps = {
   recipe: any;
 };
 
+const MAX_WIDTH = 768;
+
 const RecipeCard = ({ recipe }: RecipeCardProps): JSX.Element => {
   const [active, setActive] = useState(false);
+  const [smallScreen, setSmallScreen] = useState(false);
 
   const difficultyList: string[] = ["Fácil", "Normal", "Difícil"];
   const score: string = (Math.trunc(Math.random() * 5) + 1).toFixed(1);
   const difficulty: string = difficultyList[Math.trunc(Math.random() * 3)];
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > MAX_WIDTH) {
+        setSmallScreen(true);
+      } else {
+        setSmallScreen(false);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const getShortName = (name: string): JSX.Element => (
     <>
@@ -27,8 +43,10 @@ const RecipeCard = ({ recipe }: RecipeCardProps): JSX.Element => {
   return (
     <Fragment>
       <div
-        className={`recipeCard`}
-        onMouseOver={() => setActive(true)}
+        className={`recipeCard ${active ? "show" : ""}`}
+        onMouseOver={() => {
+          smallScreen ? setActive(true) : setActive(false);
+        }}
         onMouseOut={() => setActive(false)}
       >
         <img src={recipe.thumbnail_url} className="img" alt={recipe.name} />
