@@ -57,7 +57,7 @@
       position: relative;
       justify-content: flex-start;
       .recipeCard {
-        width: 180px;
+        min-width: 180px;
         height: 182px;
         padding: 0px 20px 20px 20px;
         .img {
@@ -160,7 +160,7 @@
     .carousel {
       .recipeCard {
         height: 209px;
-        width: 266px;
+        min-width: 266px;
         .img {
           width: 100px;
           height: 100px;
@@ -248,7 +248,7 @@
         &.show {
           height: 100%;
         }
-        width: 266px;
+        min-width: 266px;
         .img {
           width: 164px;
           height: 158px;

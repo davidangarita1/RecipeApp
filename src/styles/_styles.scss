@@ -136,7 +136,8 @@
   .carousel {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    overflow: auto;
+    white-space: nowrap;
     .recipeCard {
       cursor: pointer;
       display: flex;
@@ -147,6 +148,7 @@
       box-shadow: 10px 10px 20px -5px #cccccc;
       border-radius: 15px;
       margin-top: 25px;
+      margin-bottom: 50px;
       margin-right: 25.82px;
       padding-bottom: 20px;
       transition: height 0.2s;

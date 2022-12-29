@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import RecipeCard from "./RecipeCard";
+import Carousel from "./Carousel";
 
 type MainProps = {
   list: [];
@@ -10,12 +10,7 @@ const Main = ({ list }: MainProps): JSX.Element => {
     <Fragment>
       <div className="main">
         <div className="title">Nuevas Recetas</div>
-        <div className="carousel">
-          {list &&
-            list.map((recipe: any, index: number) => (
-              <RecipeCard key={index} recipe={recipe} />
-            ))}
-        </div>
+        <Carousel list={list} />
       </div>
     </Fragment>
   );
