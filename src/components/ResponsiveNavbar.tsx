@@ -6,7 +6,7 @@ type ResponsiveNavbarProps = {
   data: responsiveNavbarType[];
 };
 
-const ResponsiveNavbar = ({ data }: ResponsiveNavbarProps) => {
+const ResponsiveNavbar = ({ data }: ResponsiveNavbarProps): JSX.Element => {
   return (
     <Fragment>
       <div className="responsiveNavbar">

@@ -12,7 +12,7 @@ const Main = ({ list }: MainProps): JSX.Element => {
         <div className="title">Nuevas Recetas</div>
         <div className="carousel">
           {list &&
-            list.map((recipe, index) => (
+            list.map((recipe: any, index: number) => (
               <RecipeCard key={index} recipe={recipe} />
             ))}
         </div>

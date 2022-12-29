@@ -10,7 +10,7 @@ type RecipeCardProps = {
   recipe: any;
 };
 
-const MAX_WIDTH = 768;
+const MAX_WIDTH: number = 768;
 
 const RecipeCard = ({ recipe }: RecipeCardProps): JSX.Element => {
   const [active, setActive] = useState(false);
@@ -21,13 +21,13 @@ const RecipeCard = ({ recipe }: RecipeCardProps): JSX.Element => {
   const difficulty: string = difficultyList[Math.trunc(Math.random() * 3)];
 
   useEffect(() => {
-    function handleResize() {
+    const handleResize = () => {
       if (window.innerWidth > MAX_WIDTH) {
         setSmallScreen(true);
       } else {
         setSmallScreen(false);
       }
-    }
+    };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
