@@ -24,8 +24,12 @@ const Home = (): JSX.Element => {
       <Header />
       <ResponsiveNavbar data={responsiveNavbarData} />
       {recipes && <Main list={recipes.results} />}
-      {isLoading && <p>Loading...</p>}
-      {error && <p>Error...</p>}
+      {isLoading && <p className="loader">Loading...</p>}
+      {error && (
+        <p className="error">
+          Ocurrio un error al cargar las recetas, intente nuevamente
+        </p>
+      )}
       <Footer />
     </Fragment>
   );

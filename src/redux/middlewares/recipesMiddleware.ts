@@ -7,7 +7,7 @@ export const getAllRecipes = (): any => (dispatch: any) => {
     const options = {
         method: 'GET',
         url: `${API_URL}/recipes/list`,
-        params: {from: '0', size: '4', tags: 'under_30_minutes'},
+        params: {from: '0', size: '5', tags: 'under_30_minutes'},
         headers: {
             'Content-Type': 'application/json',
             'X-RapidAPI-Key': `${API_KEY}`,
